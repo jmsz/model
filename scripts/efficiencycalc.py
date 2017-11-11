@@ -12,13 +12,12 @@ inner_radius = 1 # m
 detector_x = 0.1 # m
 detector_y = 0.1 # m
 detector_area = detector_x * detector_y # m^2
-
 solid_angle = detector_area / (4 * np.pi * inner_radius ** 2)
 
 solid_angle= 0.5
 
 number_of_layers = 1
-thickness = 2 # cm
+thickness = 1 # cm
 
 incidient_gamma_energy = 500 # keV
 incident_gamma = source_activity * solid_angle

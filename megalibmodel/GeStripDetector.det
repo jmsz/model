@@ -1,0 +1,20 @@
+MDStrip2D                  GeStrip
+
+//GeStrip.StructuralPitch      2   10   1
+//GeStrip.StructuralOffset     0.0   0.0   0.0
+
+//GeStrip.Offset              0  0
+//GeStrip.StripNumber          10  10
+
+Orig:
+GeStrip.NoiseThreshold       46   8
+GeStrip.TriggerThreshold     59   4
+GeStrip.Overflow             500 50
+GeStrip.FailureRate 0.19
+
+GeStrip.EnergyResolution Lorentz  60   60  9.7
+GeStrip.EnergyResolution Lorentz 122  122  9.7
+GeStrip.EnergyResolution Lorentz 250  250  14
+
+
+#GeStrip.PulseShape 2.27970e-02 -2.27121e-04 7.62027e-07 -3.62385e-10 8.14934e-14 -1.05289e-17 8.23769e-22 -3.85672e-26 9.94586e-31 -1.08689e-35 0 12000

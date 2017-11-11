@@ -1,0 +1,67 @@
+// VERY SIMPLE Prototype in the Duke/ballon flight configuration
+
+Name GeStripDetector
+Version 2.06
+
+
+Include $(MEGALIB)/resource/examples/geomega/materials/Materials.geo
+
+Include GeStripDetector.geo
+Include GeStripDetector.det
+
+//Include Calorimeter8.geo
+//Include Calorimeter8.det
+
+//Include Calorimeter4.geo
+//Include Calorimeter4.det
+
+//Include Calorimeter2.geo
+//Include Calorimeter2.det
+
+
+SurroundingSphere 25  0.0  0.0  15.0  25.0
+
+// Use this volume, to test the surrounding sphere:
+#Volume Sphere
+#Sphere.Shape SPHE 0.0 20.0 0.0 180.0 -180.0 180.
+#Sphere.Position 0.0 0.0 0
+#Sphere.Mother WorldVolume
+
+
+
+//Trigger: at least one hit D1 and D2
+Trigger TN01
+//TN01.Veto true
+TN01.TriggerByDetector true
+TN01.DetectorType Strip2D 1
+
+
+Volume WorldVolume
+WorldVolume.Material Air
+WorldVolume.Visibility 1
+WorldVolume.Shape BRIK 50. 50. 50.
+WorldVolume.Mother 0
+
+
+
+// Add wafer:
+
+GeStripDetector.Copy hermes
+hermes.Position  -2.05  -2.05 1
+hermes.Mother WorldVolume
+
+//SiStripDetector.Copy bachus
+//bachus.Position  -2.05  -2.05 24.7
+//bachus.Mother WorldVolume
+
+//SiStripDetector.Copy neptun
+//neptun.Position  -2.05  -2.05 23.7
+//neptun.Mother WorldVolume
+
+//SiStripDetector.Copy poseidon
+//poseidon.Position  -2.05  -2.05 22.7
+//poseidon.Mother WorldVolume
+
+//SiStripDetector.Copy achilles
+//achilles.Position  -2.05  -2.05 21.7
+//achilles.Mother WorldVolume

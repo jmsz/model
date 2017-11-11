@@ -2,6 +2,7 @@ import os
 import sys
 import matplotlib.pyplot as plt
 import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
 
 def calc_field_1d(x):
     efield = []
@@ -49,6 +50,14 @@ x = np.linspace(0, 5, 100)
 calc_field_1d(x)
 calc_weighting_field_1d(x)
 
-    # check efield TODO
+#make 2d grid
 
-    # weighting field... in 1d
+
+
+#calculate weighting potential
+
+#plot
+
+#timing
+
+#plot
